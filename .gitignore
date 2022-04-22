@@ -4,3 +4,4 @@ rh_venv
 *.pyc
 gestao_rh/__pycache__/
 static
+media/documentos/
