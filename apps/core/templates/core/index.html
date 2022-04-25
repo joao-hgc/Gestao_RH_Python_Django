@@ -6,12 +6,13 @@
       Column
     </div>
     <div class="col">
-     Ola {{ usuario.funcionario.nome }}
-      <a href="{% url 'list_funcionarios' %}">Gerenciar funcionarios</a>
-      <a href="{% url 'list_departamentos' %}">Gerenciar departamentos</a>
+     Ola {{ usuario.funcionario.nome }}<br>
+      <a href="{% url 'list_funcionarios' %}">Gerenciar funcionarios</a><br>
+      <a href="{% url 'list_departamentos' %}">Gerenciar departamentos</a><br>
+      <a href="{% url 'list_hora_extra' %}">Gerenciar bacon de horas</a><br>
     </div>
     <div class="col">
-      <a href="{% url 'logout' %}">Logout</a>
+      <a href="{% url 'logout' %}">Logout</a><br>
 
       {% if usuario.funcionario.empresa %}
         <a href="{% url 'edit_empresa' usuario.funcionario.empresa.id %}">Editar empresa</a>
