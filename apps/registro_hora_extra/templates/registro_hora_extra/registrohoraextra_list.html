@@ -4,12 +4,18 @@
     Baco de Horas
 <br>
     {% for registro_re in object_list %}
-
         <a href="{% url 'update_hora_extra' registro_re.id %}">
              {{ registro_re }}
+        </a>
+
+        <a href="{% url 'delete_hora_extra' registro_re.id %}">
+           Deletar
         </a>
     <br>
     {% endfor %}
 
-<!--<a href="{% url 'create_funcionario' %}" class="btn btn-info">Novo</a>-->
+    {% if not object_list %}
+        <h3>Nao existe registro de hora extra no banco de dados</h3>
+    {% endif %}
+
 {% endblock %}
