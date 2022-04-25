@@ -18,3 +18,6 @@ class HoraExtraDelete(DeleteView):
     model = RegistroHoraExtra
     success_url = reverse_lazy('list_hora_extra')
 
+class HoraExtraNovo(CreateView):
+    model = RegistroHoraExtra
+    fields = ['motivo', 'funcionario', 'horas']
